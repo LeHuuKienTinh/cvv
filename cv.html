@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(120deg, #cad3f0 0%, #7f7bf6 100%);
+        color: #222;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+        padding: 40px 32px;
+    }
+
+    .header-info {
+        display: flex;
+        margin-bottom: 24px;
+        /* margin-right: 20px; */
+        gap: 12px;
+    }
+
+    .img-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-name p {
+        font-style: italic;
+    }
+
+    .profile img {
+        border-radius: 50%;
+        box-shadow: 0 2px 12px rgba(44, 62, 80, 0.10);
+        border: 4px solid #2a7ae2;
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        align-items: center;
+    }
+
+    .profile-info h1 {
+        font-size: 2.3rem;
+        margin-bottom: 0.2em;
+        color: #2a7ae2;
+        letter-spacing: 1px;
+    }
+
+    .profile-info i {
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        color: #2a7ae2;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        /* background: linear-gradient(90deg, #e0e7ff 0%, #fff 100%); */
+        padding: 6px 0 6px 12px;
+        border-bottom: 2px solid #7caae6;
+        border-radius: 4px;
+        padding: 12px;
+    }
+
+    h3 {
+        display: inline;
+        font-size: 1.08rem;
+        margin-top: 1.2em;
+        color: #1e293b;
+        font-weight: 700;
+    }
+
+    hr {
+        border: none;
+        border-top: 1.5px solid #c1d1fb;
+        margin: 20px 0;
+    }
+
+    ul {
+        margin: 12px 0 0 12px;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 7px;
+        line-height: 1.6;
+    }
+
+    a {
+        color: #2a7ae2;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-weight: 500;
+    }
+
+    a:hover {
+        color: #1e293b;
+        text-decoration: underline;
+    }
+
+    .container>div {
+        margin-bottom: 8px;
+    }
+
+    .container p {
+        line-height: 1.7;
+        color: #333;
+
+    }
+
+    .skills {
+        display: flex;
+        margin-bottom: 24px;
+        /* margin-right: 20px; */
+        gap: 12px;
+    }
+
+    .target {
+        text-align: justify;
+        margin-top: 10px;
+    }
+
+    .date {
+        color: #282828;
+        font-size: 1rem;
+        float: right;
+        font-weight: bold;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .title b {
+        display: block;
+        margin: 12px 12px 0 12px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .info-details,
+    .learned {
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        width: 50%;
+        background-color: #c9dbf49e;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 12px rgba(44, 62, 80, 0.10);
+
+    }
+
+    .skill-deep,
+    .skill-soft {
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        width: 50%;
+        background-color: #c9dbf49e;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 12px rgba(44, 62, 80, 0.10);
+    }
+
+    .target-job {
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        width: 100%;
+        background-color: #c9dbf49e;
+        padding: 8px 16px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 12px rgba(44, 62, 80, 0.10);
+    }
+
+    .project {
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        width: 100%;
+        background-color: #c9dbf49e;
+        padding: 24px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 12px rgba(44, 62, 80, 0.10);
+    }
+
+    .list-projects {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .list-projects h2 {
+        margin-bottom: 16px;
+        padding-left: 28px;
+    }
+
+    i {
+        padding-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 30px 10px 10px 10px;
+            margin-top: 0;
+            border-radius: 0px;
+        }
+
+        .header-info {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            align-items: center;
+        }
+
+        .profile-info h1 {
+            font-size: 1.8rem;
+        }
+
+        .skills {
+            flex-direction: column;
+        }
+
+        .info-details,
+        .learned,
+        .skill-deep,
+        .skill-soft,
+        .target-job,
+        .project {
+            padding: 24px 8px;
+            width: 100%;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+
+        h3 {
+            margin-left: 8px;
+            box-sizing: border-box;
+        }
+
+        ul {
+            margin: 8px 0 0 0 ;
+        }
+
+        .title b {
+            margin-bottom: 0;
+        }
+    }
+</style>
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="img-name">
+                <img src="avt.jpg" alt="Avatar">
+                <div class="profile-info">
+                    <h1>Lê Hữu Kiên Tĩnh</h1>
+                    <p>Lập trình viên</p>
+                </div>
+            </div>
+            <hr>
+            <div class="header-info">
+                <div class="info-details">
+                    <h2>Thông tin liên hệ</h2>
+                    <ul>
+                        <li><i class='bx bxs-phone-call'></i> 0928043664</li>
+                        <li><i class='bx bx-mail-send'></i> lehkientinh@dtu.edu.vn</li>
+                        <li><i class='bx bxl-github'></i> <a
+                                href="github.com/LeHuuKienTinh">github.com/LeHuuKienTinh</a></li>
+                        <li><i class='bx bxs-home'></i> Lương Văn Can, Huế</li>
+                        <li><i class='bx bxs-cake'></i> 08/06/2003</li>
+
+                    </ul>
+                </div>
+                <div class="learned">
+                    <h2>Học vấn</h2>
+                    <ul>
+                        <li>
+                            <h4>Công nghệ thông tin <span>2021-2025</span></h4>
+                            <i>Chuyên ngành Công nghệ phần mềm, Đại học Duy Tân</i>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="skills">
+                <div class="skill-deep">
+                    <h2>Kỹ năng chuyên môn</h2>
+                    <ul>
+                        <li><i class='bx bxl-c-plus-plus'></i> Ngôn ngữ lập trình: JavaScript, PHP</li>
+                        <li><i class='bx bxl-vuejs'></i> Frontend: VueJS, ReactJS, HTML, CSS, SCSS</li>
+                        <li><i class='bx bxl-nodejs'></i> Backend: NodeJS (Express), PHP Laravel</li>
+                        <li><i class='bx bxl-postgresql'></i> CSDL: MySQL</li>
+                        <li><i class='bx bx-code-alt'></i> Công cụ & môi trường: Git, Github, Postman, VSCode, Vite</li>
+                        <li><i class='bx bx-file'></i> RESTful API, xác thực JWT, kiến trúc MVC</li>
+                    </ul>
+                </div>
+                <div class="skill-soft">
+                    <h2>Kỹ năng mềm</h2>
+                    <ul>
+                        <li><i class='bx bx-check'></i> Khả năng tự học, giải quyết vấn đề tốt</li>
+                        <li><i class='bx bx-check'></i> Làm việc nhóm hiệu quả, giao tiếp rõ ràng</li>
+                        <li><i class='bx bx-check'></i> Có tinh thần trách nhiệm và chủ động trong công việc</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="target-job">
+            <h2>Mục tiêu nghề nghiệp</h2>
+            <p class="target">
+                Là sinh viên mới tốt nghiệp chuyên
+                ngành Công nghệ phần mềm, tôi
+                mong muốn tìm kiếm cơ hội thực
+                tập tại vị trí Intern Web Developer
+                để học hỏi, nâng cao kỹ năng lập
+                trình và tích lũy kinh nghiệm thực
+                tế. Tôi có tinh thần cầu tiến, trách
+                nhiệm và sẵn sàng thích nghi với
+                môi trường làm việc chuyên
+                nghiệp
+            </p>
+        </div>
+        <hr>
+        <div class="list-projects">
+            <h2>Các dự án đã thực hiện</h2>
+            <div class="project">
+                <h3>DTUBE - ỨNG DỤNG XEM PHIM TRỰC TUYẾN TÍCH HỢP CHATBOT, MÃ QR </h3>
+                <i class="date">02/2025-05/2025</i>
+                <p class="clear"></p>
+                <i class="title">
+                    <b>Đồ án tốt nghiệp - Đồ án nhóm</b>
+                </i>
+                <ul>
+                    <li><i class='bx bxs-chevron-right'></i> <b>DTube</b> là một nền tảng xem phim trực tuyến cho phép
+                        người dùng
+                        đăng ký tài khoản, lựa chọn gói dịch vụ trả phí, thanh toán trực tuyến
+                        và xem các bộ phim được phân loại theo thể loại. Hệ thống bao gồm
+                        tính năng quản lý người dùng, phim, gói cước, giao dịch,báo cáo vi
+                        phạm, và thanh toán tự động qua mã QR.</li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Công nghệ sử dụng:</b> React, SCSS, Node.js, Express.js,
+                        MySQL, JWT,
+                        VietQR, SePay, RESTful API</li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Chức năng chính:</b>
+                        <ul>
+                            <li><i class='bx bx-chevron-right'></i> Đăng ký / Đăng nhập người dùng (JWT), đăng nhập bằng
+                                Token, đổi mật khẩu, quên mật khẩu</li>
+                            <li><i class='bx bx-chevron-right'></i> Xem phim, xem danh sách phim, tìm kiếm, lọc theo thể
+                                loại</li>
+                            <li><i class='bx bx-chevron-right'></i> Chức năng like phim, báo cáo tập phim lỗi</li>
+                            <li><i class='bx bx-chevron-right'></i> Đăng ký và thanh toán gói dịch vụ bằng QR code
+                                (SePay), xác
+                                thực realtime</li>
+                            <li><i class='bx bx-chevron-right'></i> Trang quản trị: quản lý người dùng, phim, báo cáo,
+                                gói cước,
+                                bình luận, giao dịch, thông báo</li>
+                        </ul>
+                    </li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Vai trò:</b> Phụ trách toàn bộ Frontend (ReactJS) và 1
+                        phần Backend( xây
+                        dựng API, tích hợp thanh toán). Xây dựng giao diện người dùng bằng
+                        React và SCSS.</li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Link Github:</b>
+                        <ul>
+                            <li><a href="">https://github.com/LeHuuKienTinh/dtube-frontend</a> </li>
+                            <li><a href="">https://github.com/LeHuuKienTinh/dtube-backend</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>DZFULLSTACK - WEBSITE THƯƠNG MẠI ĐIỆN TỬ <i class="date">09/2023-02/2024</i></h3>
+                <p class="clear"></p>
+                <i class="title">
+                    <b>Dự án cá nhân</b>
+                </i>
+                <ul>
+                    <li><i class='bx bxs-chevron-right'></i> <b>DzFullstack</b> là nền tảng thương mại điện tử cho phép
+                        người dùng đăng
+                        ký, đăng nhập, xem sản phẩm, thêm vào giỏ hàng, đặt hàng và thanh
+                        toán online. Quản trị viên có thể quản lý sản phẩm, đơn hàng và người
+                        dùng qua dashboard riêng.</li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Công nghệ sử dụng:</b> Vue, PHP Laravel, MySQL, VietQR,
+                        JWT,RESTful
+                        API</li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Chức năng chính:</b>
+                        <ul>
+                            <li><i class='bx bx-chevron-right'></i> Đăng ký/Đăng nhập người dùng(JWT), quên mật khẩu,
+                                đổi mật
+                                khẩu</li>
+                            <li><i class='bx bx-chevron-right'></i> Xem danh sách sản phẩm, danh mục sản phẩm,tìm kiếm,
+                                giỏ
+                                hàng, thanh toán</li>
+                            <li><i class='bx bx-chevron-right'></i> Trang ADMIN quản lý đại lý, đơn hàng, sản phẩm, nhân
+                                viên,
+                                danh mục, khách hàng, phân quyền</li>
+                            <li><i class='bx bx-chevron-right'></i> Trang đại lý quản lý đơn hàng, nhập kho, sản phẩm,
+                                thống kê, ...</li>
+                        </ul>
+                    </li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Vai trò:</b> Phát triển toàn bộ hệ thống từ frontend đến
+                        backend, thiết kế
+                        cơ sở dữ liệu, bảo mật API và triển khai tính năng mua hàng.</li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Link Github:</b>
+                        <ul>
+                            <li><a href="">https://github.com/LeHuuKienTinh/DZTMDT </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>KTMOBILE- WEBSITE THƯƠNG MẠI ĐIỆN TỬ <i class="date">10/2024-01/2025</i></h3>
+                <p class="clear"></p>
+                <i class="title">
+                    <b>Dự án cá nhân</b>
+                </i>
+                <ul>
+                    <li><i class='bx bxs-chevron-right'></i> <b>KTMobile</b> là website thương mại điện tử chuyên bán
+                        điện thoại và phụ
+                        kiện. Người dùng có thể xem danh sách sản phẩm, thêm vào giỏ hàng,
+                        đăng ký/đăng nhập và đặt hàng. Hệ thống có trang quản trị riêng
+                        cho admin để quản lý sản phẩm, đơn hàng và người dùng.</li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Công nghệ sử dụng:</b> Vue.js, PHP Laravel, MySQL,
+                        RESTful API</li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Chức năng chính:</b>
+                        <ul>
+                            <li><i class='bx bx-chevron-right'></i> Đăng ký/Đăng nhập người dùng</li>
+                            <li><i class='bx bx-chevron-right'></i> Danh sách sản phẩm, tìm kiếm, lọc theo thương hiệu,
+                                giỏ hàng</li>
+                            <li><i class='bx bx-chevron-right'></i> Đặt hàng và quản lý đơn hàng</li>
+                            <li><i class='bx bx-chevron-right'></i> Trang quản trị: thêm/sửa/xóa sản phẩm, duyệt đơn
+                                hàng</li>
+                            <li><i class='bx bx-chevron-right'></i> Phân quyền người dùng (admin/user) </li>
+                        </ul>
+                    </li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Vai trò:</b> Phụ trách cả frontend (Vue.js) và backend
+                        (Laravel), thiết kế
+                        giao diện người dùng, xây dựng RESTful API và xử lý logic đặt hàng,
+                        quản trị sản phẩm.</li>
+                    <li><i class='bx bxs-chevron-right'></i> <b>Link Github:</b>
+                        <ul>
+                            <li><a href=""> https://github.com/LeHuuKienTinh/KT_DTDD</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
